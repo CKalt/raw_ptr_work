@@ -19,6 +19,10 @@ impl <'a> Name<'a> {
     unsafe fn from_addr<'b>(address: usize) -> &'b Name<'a> {
         &*(address as *const Self)
     }
+
+    unsafe fn mut_from_addr<'b>(address: usize) -> &'b mut Name<'a> {
+        &mut *(address as *mut Self)
+    }
 }
 
 fn main() {
@@ -49,7 +53,16 @@ fn main() {
         name2 = Name::from_addr(addr);
     }
 
-    println!("name: name = {}, num = {}", name.name, name.num);
-    println!("name2: name = {}, num = {}", name2.name, name2.num);
+    println!("1. name: name = {}, num = {}", name.name, name.num);
+    println!("2. name2: name = {}, num = {}", name2.name, name2.num);
+
+    let name3: &mut Name;
+    unsafe {
+        name3 = Name::mut_from_addr(addr);
+    }
+    name3.num += 10;
+    println!("3. name: name = {}, num = {}", name.name, name.num);
+    println!("4. name2: name = {}, num = {}", name2.name, name2.num);
+    println!("5. name3: name = {}, num = {}", name3.name, name3.num);
 
 }

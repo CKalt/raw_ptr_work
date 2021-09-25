@@ -1,13 +1,2 @@
    Compiling raw v0.1.0 (/home/chris/projects/rust/raw)
-error[E0605]: non-primitive cast: `*const u32` as `&u32`
-  --> src/main.rs:12:18
-   |
-12 |         my_ref = data_ptr as &u32;
-   |                  ^^^^^^^^^^^^^^^^ an `as` expression can only be used to convert between primitive types or to coerce to a specific trait object
-
-error: aborting due to previous error
-
-For more information about this error, try `rustc --explain E0605`.
-error: could not compile `raw`
-
-To learn more, run the command again with --verbose.
+    Finished dev [unoptimized + debuginfo] target(s) in 0.39s

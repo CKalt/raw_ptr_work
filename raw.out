@@ -1,5 +1,11 @@
-    Finished release [optimized] target(s) in 0.00s
+   Compiling raw v0.1.0 (/home/chris/projects/rust/raw)
+    Finished release [optimized] target(s) in 0.44s
      Running `target/release/raw`
 orig some_data = 14
-Dereferenced data: 19
-final some_data = 19
+Dereferenced data: Foo { num: 19, name: "Hello", children: [] }
+final some_data = Foo { num: 19, name: "what you up to?", children: [] }
+1. name: name = Theo, num = 778
+2. name2: name = Theo, num = 778
+3. name: name = Theo, num = 788
+4. name2: name = Theo, num = 788
+5. name3: name = Theo, num = 788
