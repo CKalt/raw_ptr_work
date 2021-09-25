@@ -1,0 +1,5 @@
+   Compiling raw v0.1.0 (/home/chris/projects/rust/raw)
+    Finished release [optimized] target(s) in 0.56s
+     Running `target/release/raw`
+Dereferenced data: 20
+some_data = 20
